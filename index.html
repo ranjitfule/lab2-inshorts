@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Inshorts - A web news portal</title>
+<style type="text/css">
+*{padding: 0; margin: 0; box-sizing: border-box;}
+.container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}	
+
+
+.container .sidenav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 220px;
+	height: 100%;
+	background-color: rgb(20,20,20);
+	padding-top: 50px;
+	z-index: 1;
+	transition: 0.3s;
+	display: none;
+}
+
+.sidenav a{
+	color: white;
+	text-decoration: none;
+	font-size: 120%;
+	font-family: Helvetica;
+	display: block;
+	padding: 10px 20px;
+	text-align: left;
+}
+
+.sidenav a:hover{
+	background-color: rgba(80,80,80,0.65);
+}
+
+.close{
+	color: gray;
+	position: absolute;
+	left: 105%;
+	top: 10px;
+	font-family: Helvetica;
+	text-align: center;
+}
+
+.show-sidenav{
+	color: gray;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	font-family: Helvetica;
+	text-align: center;
+}
+
+.close-btn, .show-btn{
+	font-size: 130%;
+	padding: 5px 10px;
+}
+.close-btn:hover, .show-btn:hover{
+	background-color: #e1e1e1;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.btn-info{
+	position: absolute;
+	left: 120%;
+	top: -50%;
+	font-size: 150%;
+	color: rgb();
+}
+
+.header{
+	text-align: center;
+	box-shadow: 3px 5px 8px #dcdcdc;
+}
+
+.info-strip{
+	background-color: red;
+	color: white;
+	width: 60%;
+	font-size: 110%;
+	font-family: Helvetica;
+	margin: 20px auto;
+	box-shadow: 3px 5px 8px #dcdcdc;
+	overflow: hidden;
+	padding: 5px 50px;
+	height: 60px;
+	line-height: 60px;
+}
+
+.info-strip img{ float:right; }
+
+.info-strip:after{ clear: both; }
+
+.news-article{
+	box-shadow: 3px 5px 8px #dcdcdc;
+	width: 60%;
+	margin: 5px auto;
+	padding: 5px;
+	height: 250px;
+}
+.img-data { width: 30%; }
+.news-data { width: 70%; }
+.img-data, .news-data{
+	display: inline-block;
+	float: left;
+} 
+
+.news-title{ 
+	font-size: 140%; 
+	font-family: helvetica; 
+}
+
+.news-author-date{
+	font-size: 70%; 
+	font-family: helvetica;
+}
+
+.news-desc{
+	font-size: 105%;
+	font-family: consolas;
+	margin-top: 10px;
+	text-align: justify;
+}
+
+.news-source{
+	position: absolute;
+	bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="header">
+		<div class="show-sidenav">
+			<span class="show-btn" onclick="openFunction()">&#9776;</span>
+			<span class="btn-info">Menu</span>
+		</div>
+
+		<img src="logo_inshorts.png" width="200" height="70">
+
+		<div class="sidenav">
+			<div class="close">
+				<span class="close-btn" onclick="closeFunction()">X</span>
+				<span class="btn-info">Close</span>
+			</div>
+			<a href="#">All News</a>
+			<a href="#">India</a>
+			<a href="#">Business</a>
+			<a href="#">Sports</a>
+			<a href="#">World</a>
+			<a href="#">Polities</a>
+			<a href="#">Technology</a>
+			<a href="#">Startup</a>
+			<a href="#">Entertainment</a>
+			<a href="#">Miscellaneous</a>
+			<a href="#">Hatke</a>
+			<a href="#">Science</a>
+			<a href="#">Automobile</a>
+			
+		</div>
+	</div>
+	<div class="news-body">
+		<div class="info-strip">
+			For the best experience use inshorts app on your smartphone
+			<img src="appstore.png" width="180" height="50">
+			<img src="playstore.png" width="180" height="50">
+		</div>
+		<div class="news-article">
+			<div class="img-data">
+				<img src="kharghar.jpeg" width="320" height="240">
+			</div>
+			<div class="news-data">
+				<p class="news-title">Kharghar: A Paradise in Navi Mumbai</p>
+				<p class="news-author-date"><strong>short</strong> by Apaar Sharma / 03:25 pm on 28 Oct 2021,Thursday
+</p>
+				<p class="news-desc">
+					Mumbai Police have summoned BJP worker Manish Bhanushali who claimed he tipped off the NCB about the drug party on a cruise. Bhanushali was seen holding Arbaaz Merchantt's hand after the raid and is an NCB witness. Another witness Prabhakar Sail alleged the NCB and private detective KP Gosavi asked for ₹25 crore from Shah Rukh Khan to release Aryan.
+				</p>
+				<p class="news-source"><a href="#">
+					read more at LatestLY
+				</a></p>
+			</div>
+
+		</div>
+		<div class="news-article">
+			<div class="img-data">
+				<img src="kharghar.jpeg" width="320" height="240">
+			</div>
+			<div class="news-data">
+				<p class="news-title">Kharghar: A Paradise in Navi Mumbai</p>
+				<p class="news-author-date"><strong>short</strong> by Apaar Sharma / 03:25 pm on 28 Oct 2021,Thursday
+</p>
+				<p class="news-desc">
+					Mumbai Police have summoned BJP worker Manish Bhanushali who claimed he tipped off the NCB about the drug party on a cruise. Bhanushali was seen holding Arbaaz Merchantt's hand after the raid and is an NCB witness. Another witness Prabhakar Sail alleged the NCB and private detective KP Gosavi asked for ₹25 crore from Shah Rukh Khan to release Aryan.
+				</p>
+				<p class="news-source"><a href="#">
+					read more at LatestLY
+				</a></p>
+			</div>
+
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+var elem = document.getElementsByClassName("sidenav")[0];
+
+function closeFunction(){
+	elem.style.display = "none";
+}
+
+function openFunction(){
+	elem.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
